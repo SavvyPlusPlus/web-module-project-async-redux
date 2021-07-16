@@ -5,7 +5,9 @@ export const FETCH_JOKE_SAD = 'FETCH_JOKE_SAD';
 
 export const fetchJoke = (dispatch) => {
     // Hit the api (axios)
-    dispatch({ type: FETCH_JOKE_START }); // loading = true, display spinner
+    dispatch({ 
+        type: FETCH_JOKE_START 
+    }); // loading = true, display spinner
     axios.get("https://official-joke-api.appspot.com/random_joke")
 
         // Then, if it's happy, save the response to state.JOKEReducer.JOKE
